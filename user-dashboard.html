@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IT Solution Dashboard</title>
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="./css/user-dashboard.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+
+  <div class="sidebar-header">
+    <h2 class="logo">STACKLY</h2>
+    <div class="close-btn" id="closeBtn">
+      <i class="ri-close-line"></i>
+    </div>
+  </div>
+
+<ul class="menu">
+<li><a href="#dashboard" class="active"><i class="ri-dashboard-line"></i> Dashboard</a></li>
+<li><a href="#services"><i class="ri-tools-line"></i> My Services</a></li>
+<li><a href="#projects"><i class="ri-code-s-slash-line"></i> My Projects</a></li>
+<li><a href="#billing"><i class="ri-secure-payment-line"></i> Billing</a></li>
+
+    <div class="menu-title">SYSTEM</div>
+
+    <li><a href="dashboard-404.html"><i class="ri-settings-3-line"></i> Settings</a></li>
+    <li><a href="dashboard-404.html"><i class="ri-logout-box-line"></i> Logout</a></li>
+  </ul>
+
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+
+    <div class="nav-left">
+      <div class="menu-btn" id="menuBtn">
+        <i class="ri-menu-line" id="menuIcon"></i>
+      </div>
+    </div>
+
+    <h2 class="mobile-logo">STACKLY</h2>
+
+    <div class="nav-right">
+
+      <div class="nav-search">
+        <i class="ri-search-line"></i>
+        <input type="text" placeholder="Search...">
+      </div>
+
+      <div class="icon">
+        <i class="ri-notification-3-line"></i>
+        <span class="badge">3</span>
+      </div>
+
+      <div class="icon">
+        <i class="ri-message-2-line"></i>
+        <span class="badge">5</span>
+      </div>
+
+      <div class="profile">
+        <div class="avatar">
+          <i class="ri-user-3-line"></i>
+        </div>
+        <div class="profile-info">
+          <p class="name">Ramya User</p>
+          <p class="email">ramyakumar@gmail.com</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+<section id="dashboard" class="user-dashboard">
+
+  <!-- WELCOME -->
+  <div class="welcome-box">
+    <h2>Welcome! Ramya 👋</h2>
+    <p>Here’s your IT services and project overview</p>
+  </div>
+
+  <!-- CARDS -->
+  <div class="dashboard-cards">
+
+    <!-- CARD 1 -->
+    <div class="dash-card">
+      <div class="icon">
+        <i class="ri-tools-line"></i>
+      </div>
+      <h3>My Services</h3>
+      <div class="card-bottom">
+        <span>Active Services</span>
+        <b class="blue">8 Running</b>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="dash-card">
+      <div class="icon">
+        <i class="ri-code-s-slash-line"></i>
+      </div>
+      <h3>My Projects</h3>
+      <div class="card-bottom">
+        <span>In Progress</span>
+        <b class="purple">5 Ongoing</b>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="dash-card">
+      <div class="icon">
+        <i class="ri-customer-service-2-line"></i>
+      </div>
+      <h3>Support Tickets</h3>
+      <div class="card-bottom">
+        <span>Open Requests</span>
+        <b class="green">3 Active</b>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="dash-card">
+      <div class="icon">
+        <i class="ri-secure-payment-line"></i>
+      </div>
+      <h3>Billing</h3>
+      <div class="card-bottom">
+        <span>Current Plan</span>
+        <b class="red">Premium</b>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+  
+
+<section class="user-analytics-section">
+
+  <div class="ua-container">
+
+    <!-- LEFT (CHART) -->
+    <div class="ua-left">
+      <h2>Usage Analytics</h2>
+
+      <div class="ua-chart-box">
+        <canvas id="userChart"></canvas>
+      </div>
+    </div>
+
+    <!-- RIGHT (INSIGHTS) -->
+    <div class="ua-right">
+
+      <div class="ua-card">
+        <i class="ri-time-line"></i>
+        <h4>Active Hours</h4>
+        <p>System usage increased by 40% this week</p>
+      </div>
+
+      <div class="ua-card">
+        <i class="ri-cloud-line"></i>
+        <h4>Cloud Usage</h4>
+        <p>Optimized cloud resources for better performance</p>
+      </div>
+
+      <div class="ua-card">
+        <i class="ri-shield-check-line"></i>
+        <h4>Security Status</h4>
+        <p>All services secured with zero vulnerabilities</p>
+      </div>
+
+      <div class="ua-card">
+        <i class="ri-lightbulb-flash-line"></i>
+        <h4>AI Insights</h4>
+        <p>Smart automation improved workflow efficiency</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="services" class="user-services">
+
+  <!-- HEADER -->
+  <div class="service-header">
+    <h2>My Services</h2>
+    <button onclick="go404()" class="add-service-btn">
+      <i class="ri-add-line"></i> Add Service
+    </button>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="service-container">
+
+    <!-- CARD -->
+    <div class="service-card">
+      <div class="service-icon">
+        <i class="ri-code-s-slash-line"></i>
+      </div>
+      <h3>Web Development</h3>
+      <p>Responsive and modern website solutions</p>
+
+      <div class="progress">
+        <div class="progress-fill blue" style="width:80%"></div>
+      </div>
+
+      <span class="status active">Active</span>
+    </div>
+
+    <!-- CARD -->
+    <div class="service-card">
+      <div class="service-icon">
+        <i class="ri-smartphone-line"></i>
+      </div>
+      <h3>App Development</h3>
+      <p>Android & iOS mobile applications</p>
+
+      <div class="progress">
+        <div class="progress-fill purple" style="width:60%"></div>
+      </div>
+
+      <span class="status progress-status">In Progress</span>
+    </div>
+
+    <!-- CARD -->
+    <div class="service-card">
+      <div class="service-icon">
+        <i class="ri-cloud-line"></i>
+      </div>
+      <h3>Cloud Hosting</h3>
+      <p>Secure cloud infrastructure services</p>
+
+      <div class="progress">
+        <div class="progress-fill green" style="width:90%"></div>
+      </div>
+
+      <span class="status active">Active</span>
+    </div>
+
+    <!-- CARD -->
+    <div class="service-card">
+      <div class="service-icon">
+        <i class="ri-shield-check-line"></i>
+      </div>
+      <h3>Cyber Security</h3>
+      <p>Advanced protection & monitoring</p>
+
+      <div class="progress">
+        <div class="progress-fill red" style="width:40%"></div>
+      </div>
+
+      <span class="status pending">Pending</span>
+    </div>
+
+    
+<!-- CARD 5 -->
+<div class="service-card">
+  <div class="service-icon">
+    <i class="ri-database-2-line"></i>
+  </div>
+  <h3>Database Management</h3>
+  <p>Secure and optimized data storage solutions</p>
+
+  <div class="progress">
+    <div class="progress-fill blue" style="width:75%"></div>
+  </div>
+
+  <span class="status active">Active</span>
+</div>
+
+<!-- CARD 6 -->
+<div class="service-card">
+  <div class="service-icon">
+    <i class="ri-ai-generate"></i>
+  </div>
+  <h3>AI Integration</h3>
+  <p>Smart automation using AI-powered tools</p>
+
+  <div class="progress">
+    <div class="progress-fill purple" style="width:55%"></div>
+  </div>
+
+  <span class="status progress-status">In Progress</span>
+</div>
+
+<!-- CARD 7 -->
+<div class="service-card">
+  <div class="service-icon">
+    <i class="ri-global-line"></i>
+  </div>
+  <h3>SEO Optimization</h3>
+  <p>Improve website visibility and ranking</p>
+
+  <div class="progress">
+    <div class="progress-fill green" style="width:85%"></div>
+  </div>
+
+  <span class="status active">Active</span>
+</div>
+
+<!-- CARD 8 -->
+<div class="service-card">
+  <div class="service-icon">
+    <i class="ri-server-line"></i>
+  </div>
+  <h3>Server Maintenance</h3>
+  <p>Reliable server monitoring and support</p>
+
+  <div class="progress">
+    <div class="progress-fill red" style="width:45%"></div>
+  </div>
+
+  <span class="status pending">Pending</span>
+</div>
+
+<!-- CARD 9 -->
+<div class="service-card">
+  <div class="service-icon">
+    <i class="ri-settings-3-line"></i>
+  </div>
+  <h3>System Automation</h3>
+  <p>Automate workflows for better efficiency</p>
+
+  <div class="progress">
+    <div class="progress-fill blue" style="width:70%"></div>
+  </div>
+
+  <span class="status progress-status">In Progress</span>
+</div>
+
+<!-- CARD 10 -->
+<div class="service-card">
+  <div class="service-icon">
+    <i class="ri-lock-line"></i>
+  </div>
+  <h3>Data Security</h3>
+  <p>Advanced encryption and protection systems</p>
+
+  <div class="progress">
+    <div class="progress-fill green" style="width:90%"></div>
+  </div>
+
+  <span class="status active">Active</span>
+</div>
+  </div>
+
+</section>
+
+
+<section id="projects" class="user-projects">
+
+  <!-- HEADER -->
+  <div class="projects-header">
+    <h2>My Projects</h2>
+    <button onclick="go404()" class="add-project-btn">
+      <i class="ri-add-line"></i> New Project
+    </button>
+  </div>
+
+  <div class="projects-container">
+
+    <!-- LEFT (PROJECT CARDS) -->
+    <div class="projects-left">
+
+      <!-- PROJECT CARD -->
+      <div class="project-card">
+        <div class="project-top">
+          <i class="ri-code-s-slash-line"></i>
+          <span class="status active">Active</span>
+        </div>
+        <h3>Website Development</h3>
+        <p>Building responsive business website</p>
+
+        <div class="progress">
+          <div class="progress-fill blue" style="width:75%"></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-top">
+          <i class="ri-smartphone-line"></i>
+          <span class="status progress-status">In Progress</span>
+        </div>
+        <h3>Mobile App</h3>
+        <p>Android & iOS app development</p>
+
+        <div class="progress">
+          <div class="progress-fill purple" style="width:60%"></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-top">
+          <i class="ri-cloud-line"></i>
+          <span class="status active">Active</span>
+        </div>
+        <h3>Cloud Migration</h3>
+        <p>Deploying systems to cloud</p>
+
+        <div class="progress">
+          <div class="progress-fill green" style="width:85%"></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-top">
+          <i class="ri-shield-check-line"></i>
+          <span class="status pending">Pending</span>
+        </div>
+        <h3>Security Audit</h3>
+        <p>Analyzing vulnerabilities</p>
+
+        <div class="progress">
+          <div class="progress-fill red" style="width:40%"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT (CHART) -->
+    <div class="projects-right">
+      <h3>Project Progress</h3>
+      <canvas id="projectChart"></canvas>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="billing" class="billing-section">
+
+  <!-- HEADER -->
+  <div class="billing-header">
+    <h2>Billing & Subscription</h2>
+    <button class="upgrade-btn">
+      <i class="ri-vip-crown-line"></i> Upgrade Plan
+    </button>
+  </div>
+
+  <div class="billing-container">
+
+    <!-- LEFT (CHART) -->
+    <div class="billing-left">
+
+      <h3>Usage Overview</h3>
+
+      <div class="donut-box">
+        <canvas id="billingChart"></canvas>
+        <div class="donut-center">
+          <h2>75%</h2>
+          <p>Used</p>
+        </div>
+      </div>
+
+      <div class="usage-info">
+        <p><span class="dot blue"></span> Storage</p>
+        <p><span class="dot purple"></span> Bandwidth</p>
+        <p><span class="dot orange"></span> API Usage</p>
+      </div>
+
+    </div>
+
+    <!-- RIGHT (DETAILS) -->
+    <div class="billing-right">
+
+      <!-- PLAN CARD -->
+      <div class="plan-card">
+        <h3>Premium Plan</h3>
+        <p>Best for growing IT solutions</p>
+        <h2>₹1999 / month</h2>
+
+        <ul>
+          <li>✔ Unlimited Projects</li>
+          <li>✔ Cloud Hosting</li>
+          <li>✔ 24/7 Support</li>
+          <li>✔ Advanced Security</li>
+        </ul>
+
+        <button class="billing-btn">Manage Plan</button>
+      </div>
+
+      <!-- PAYMENT CARD -->
+      <div class="payment-card">
+        <h4>Last Payment</h4>
+        <p>₹1999 paid on 12 Aug 2026</p>
+        <button class="billing-btn-outline">View Invoice</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <script src="./js/admin-dashboard.js"></script>
+<script>
+const ctx3 = document.getElementById('userChart').getContext('2d');
+
+new Chart(ctx3, {
+  type: 'line',
+  data: {
+    labels: ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+    datasets: [
+      {
+        label:"Usage",
+        data:[30,50,40,60,70,65,80],
+        borderColor:"#ff512f",
+        backgroundColor:"rgba(255,81,47,0.2)",
+        tension:0.4,
+        fill:true
+      },
+      {
+        label:"Performance",
+        data:[20,40,35,55,60,50,70],
+        borderColor:"#3b82f6",
+        backgroundColor:"rgba(59,130,246,0.2)",
+        tension:0.4,
+        fill:true
+      }
+    ]
+  },
+  options:{
+    responsive:true,
+    animation:{
+      duration:1200,
+      easing:"easeOutQuart"
+    },
+    plugins:{
+      legend:{
+        display:true
+      }
+    }
+  }
+});
+
+function go404(){
+  window.location.href = "dashboard-404.html";
+}
+
+const ctx4 = document.getElementById('projectChart').getContext('2d');
+
+new Chart(ctx4, {
+  type: 'bar',
+  data: {
+    labels: ["Web","App","Cloud","Security"],
+    datasets: [{
+      data: [75,60,85,40],
+      backgroundColor: [
+        "#ff512f",
+        "#8b5cf6",
+        "#16a34a",
+        "#ef4444"
+      ],
+      borderRadius:6
+    }]
+  },
+  options:{
+    plugins:{legend:{display:false}},
+    animation:{
+      duration:1200,
+      easing:"easeOutBounce"
+    },
+    scales:{
+      y:{beginAtZero:true}
+    }
+  }
+});
+
+const ctx5 = document.getElementById('billingChart').getContext('2d');
+
+new Chart(ctx5, {
+  type: 'doughnut',
+  data: {
+    labels: ["Storage","Bandwidth","API"],
+    datasets: [{
+      data: [40,25,10],
+      backgroundColor: [
+        "#3b82f6",
+        "#8b5cf6",
+        "#f97316"
+      ],
+      borderWidth:0
+    }]
+  },
+  options:{
+    cutout:"70%",
+    plugins:{
+      legend:{display:false}
+    },
+    animation:{
+      animateRotate:true,
+      duration:1200
+    }
+  }
+});
+</script>
+</body>
+</html>

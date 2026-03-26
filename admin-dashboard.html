@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IT Solution Dashboard</title>
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="./css/admin-dashboard.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+
+  <div class="sidebar-header">
+    <h2 class="logo">STACKLY</h2>
+    <div class="close-btn" id="closeBtn">
+      <i class="ri-close-line"></i>
+    </div>
+  </div>
+
+<ul class="menu">
+  <li><a href="#dashboard" class="active"><i class="ri-dashboard-line"></i> Dashboard</a></li>
+  <li><a href="#projects"><i class="ri-code-line"></i> Projects</a></li>
+  <li><a href="#clients"><i class="ri-user-3-line"></i> Clients</a></li>
+  <li><a href="#analytics"><i class="ri-bar-chart-line"></i> Analytics</a></li>
+
+
+    <div class="menu-title">SYSTEM</div>
+
+    <li><a href="dashboard-404.html"><i class="ri-settings-3-line"></i> Settings</a></li>
+    <li><a href="dashboard-404.html"><i class="ri-logout-box-line"></i> Logout</a></li>
+  </ul>
+
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+
+    <div class="nav-left">
+      <div class="menu-btn" id="menuBtn">
+        <i class="ri-menu-line" id="menuIcon"></i>
+      </div>
+    </div>
+
+    <h2 class="mobile-logo">STACKLY</h2>
+
+    <div class="nav-right">
+
+      <div class="nav-search">
+        <i class="ri-search-line"></i>
+        <input type="text" placeholder="Search...">
+      </div>
+
+      <div class="icon">
+        <i class="ri-notification-3-line"></i>
+        <span class="badge">3</span>
+      </div>
+
+      <div class="icon">
+        <i class="ri-message-2-line"></i>
+        <span class="badge">5</span>
+      </div>
+
+      <div class="profile">
+        <div class="avatar">
+          <i class="ri-user-3-line"></i>
+        </div>
+        <div class="profile-info">
+          <p class="name">Diya Admin</p>
+          <p class="email">admindiya@gmail.com</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <section id="dashboard" class="dashboard-section">
+
+  <!-- TOP HEADING -->
+  <div class="dashboard-header">
+    <h2>Welcome! Diya 👋</h2>
+    <p>Here’s your IT Solutions dashboard overview</p>
+  </div>
+
+  <!-- CARDS -->
+  <div class="dashboard-cards">
+
+    <div class="card">
+      <div class="card-top">
+        <i class="ri-code-line"></i>
+        <h3>Projects</h3>
+      </div>
+      <div class="card-bottom">
+        <span>This Month</span>
+        <p class="blue">24 Active</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <i class="ri-user-3-line"></i>
+        <h3>Clients</h3>
+      </div>
+      <div class="card-bottom">
+        <span>This Month</span>
+        <p class="purple">120+</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <i class="ri-cloud-line"></i>
+        <h3>Services</h3>
+      </div>
+      <div class="card-bottom">
+        <span>Running</span>
+        <p class="green">18 Services</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <i class="ri-money-dollar-circle-line"></i>
+        <h3>Revenue</h3>
+      </div>
+      <div class="card-bottom">
+        <span>This Month</span>
+        <p class="red">₹2,50,000</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="it-preview-section">
+
+  <div class="preview-container">
+
+    <!-- LEFT 80% -->
+    <div class="preview-left">
+
+      <!-- PROJECT STATUS -->
+      <div class="preview-box">
+        <h3>Projects Overview</h3>
+
+        <div class="progress-item">
+          <p>Ongoing <span>75%</span></p>
+          <div class="bar"><div class="fill blue" style="width:75%"></div></div>
+        </div>
+
+        <div class="progress-item">
+          <p>Completed <span>60%</span></p>
+          <div class="bar"><div class="fill green" style="width:60%"></div></div>
+        </div>
+
+        <div class="progress-item">
+          <p>Pending <span>30%</span></p>
+          <div class="bar"><div class="fill orange" style="width:30%"></div></div>
+        </div>
+
+      </div>
+
+      <!-- SERVICES -->
+      <div class="preview-box">
+        <h3>Services Status</h3>
+
+        <div class="progress-item">
+          <p>Cloud Deployment <span>80%</span></p>
+          <div class="bar"><div class="fill purple" style="width:80%"></div></div>
+        </div>
+
+        <div class="progress-item">
+          <p>Web Development <span>65%</span></p>
+          <div class="bar"><div class="fill blue" style="width:65%"></div></div>
+        </div>
+
+        <div class="progress-item">
+          <p>Security Updates <span>40%</span></p>
+          <div class="bar"><div class="fill red" style="width:40%"></div></div>
+        </div>
+
+      </div>
+
+      <!-- CLIENT ACTIVITY -->
+      <div class="preview-box">
+        <h3>Client Activity</h3>
+
+        <div class="progress-item">
+          <p>Active Clients <span>85%</span></p>
+          <div class="bar"><div class="fill green" style="width:85%"></div></div>
+        </div>
+
+        <div class="progress-item">
+          <p>New Clients <span>50%</span></p>
+          <div class="bar"><div class="fill blue" style="width:50%"></div></div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT 20% -->
+    <div class="preview-right">
+
+      <h3>System Health</h3>
+
+      <div class="circle">
+        <div class="circle-inner">85%</div>
+      </div>
+
+      <p>Server Performance</p>
+
+      <div class="growth">
+        ↑ 98% Uptime
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="projects" class="projects-section">
+
+  <!-- HEADER -->
+  <div class="projects-header">
+    <h2>Projects Analytics</h2>
+
+    <select id="projectFilter">
+      <option value="last">Last Month</option>
+      <option value="current">This Month</option>
+      <option value="pending">Pending Projects</option>
+    </select>
+  </div>
+
+  <!-- CHART BOX -->
+  <div class="chart-box">
+    <canvas id="projectChart"></canvas>
+  </div>
+
+</section>
+
+
+<section id="clients" class="clients-section">
+
+  <!-- HEADER -->
+  <div class="clients-header">
+    <h2>Our Clients</h2>
+    <button onclick="go404()" class="add-client-btn">
+      <i class="ri-user-add-line"></i> Add Client
+    </button>
+  </div>
+
+  <!-- CLIENT CARDS -->
+  <div class="clients-container">
+
+    <!-- CLIENT CARD -->
+    <div class="client-card">
+      <div class="client-top">
+        <div class="client-icon">
+          <i class="ri-user-3-line"></i>
+        </div>
+        <div class="client-info">
+          <h3>TechNova Pvt Ltd</h3>
+          <p>Web Development</p>
+        </div>
+      </div>
+
+      <div class="client-stats">
+        <span>Projects: 12</span>
+        <span class="active">Active</span>
+      </div>
+
+      <div class="client-actions">
+        <button onclick="go404()" class="view-btn">View</button>
+        <button onclick="go404()" class="message-btn">Message</button>
+      </div>
+    </div>
+
+    <!-- CLIENT CARD -->
+    <div class="client-card">
+      <div class="client-top">
+        <div class="client-icon">
+          <i class="ri-building-line"></i>
+        </div>
+        <div class="client-info">
+          <h3>CloudCore Inc</h3>
+          <p>Cloud Solutions</p>
+        </div>
+      </div>
+
+      <div class="client-stats">
+        <span>Projects: 8</span>
+        <span class="pending">Pending</span>
+      </div>
+
+      <div class="client-actions">
+        <button onclick="go404()" class="view-btn">View</button>
+        <button onclick="go404()" class="message-btn">Message</button>
+      </div>
+    </div>
+
+    <!-- CLIENT CARD -->
+    <div class="client-card">
+      <div class="client-top">
+        <div class="client-icon">
+          <i class="ri-shield-check-line"></i>
+        </div>
+        <div class="client-info">
+          <h3>SecureNet</h3>
+          <p>Cyber Security</p>
+        </div>
+      </div>
+
+      <div class="client-stats">
+        <span>Projects: 5</span>
+        <span class="active">Active</span>
+      </div>
+
+      <div class="client-actions">
+        <button onclick="go404()" class="view-btn">View</button>
+        <button onclick="go404()" class="message-btn">Message</button>
+      </div>
+    </div>
+
+    
+<!-- CLIENT 4 -->
+<div class="client-card">
+  <div class="client-top">
+    <div class="client-icon">
+      <i class="ri-global-line"></i>
+    </div>
+    <div class="client-info">
+      <h3>WebSphere Tech</h3>
+      <p>Full Stack Development</p>
+    </div>
+  </div>
+
+  <div class="client-stats">
+    <span>Projects: 10</span>
+    <span class="active">Active</span>
+  </div>
+
+  <div class="client-actions">
+    <button onclick="go404()" class="view-btn">View</button>
+    <button onclick="go404()" class="message-btn">Message</button>
+  </div>
+</div>
+
+
+<!-- CLIENT 5 -->
+<div class="client-card">
+  <div class="client-top">
+    <div class="client-icon">
+      <i class="ri-smartphone-line"></i>
+    </div>
+    <div class="client-info">
+      <h3>Appify Solutions</h3>
+      <p>Mobile App Development</p>
+    </div>
+  </div>
+
+  <div class="client-stats">
+    <span>Projects: 7</span>
+    <span class="pending">Pending</span>
+  </div>
+
+  <div class="client-actions">
+    <button onclick="go404()" class="view-btn">View</button>
+    <button onclick="go404()" class="message-btn">Message</button>
+  </div>
+</div>
+
+
+<!-- CLIENT 6 -->
+<div class="client-card">
+  <div class="client-top">
+    <div class="client-icon">
+      <i class="ri-database-2-line"></i>
+    </div>
+    <div class="client-info">
+      <h3>DataCore Systems</h3>
+      <p>Database Management</p>
+    </div>
+  </div>
+
+  <div class="client-stats">
+    <span>Projects: 9</span>
+    <span class="active">Active</span>
+  </div>
+
+  <div class="client-actions">
+    <button onclick="go404()" class="view-btn">View</button>
+    <button onclick="go404()" class="message-btn">Message</button>
+  </div>
+</div>
+
+
+<!-- CLIENT 7 -->
+<div class="client-card">
+  <div class="client-top">
+    <div class="client-icon">
+      <i class="ri-cloud-line"></i>
+    </div>
+    <div class="client-info">
+      <h3>CloudSync Ltd</h3>
+      <p>Cloud Infrastructure</p>
+    </div>
+  </div>
+
+  <div class="client-stats">
+    <span>Projects: 6</span>
+    <span class="active">Active</span>
+  </div>
+
+  <div class="client-actions">
+    <button onclick="go404()" class="view-btn">View</button>
+    <button onclick="go404()" class="message-btn">Message</button>
+  </div>
+</div>
+
+
+<!-- CLIENT 8 -->
+<div class="client-card">
+  <div class="client-top">
+    <div class="client-icon">
+      <i class="ri-shield-keyhole-line"></i>
+    </div>
+    <div class="client-info">
+      <h3>CyberShield</h3>
+      <p>Security Solutions</p>
+    </div>
+  </div>
+
+  <div class="client-stats">
+    <span>Projects: 4</span>
+    <span class="pending">Pending</span>
+  </div>
+
+  <div class="client-actions">
+    <button onclick="go404()" class="view-btn">View</button>
+    <button onclick="go404()" class="message-btn">Message</button>
+  </div>
+</div>
+
+  </div>
+
+</section>
+
+<section id="analytics" class="analytics-section">
+
+  <div class="analytics-container">
+
+    <!-- LEFT SIDE -->
+    <div class="analytics-left">
+
+      <h2>Analytics Overview</h2>
+
+      <!-- STATS -->
+      <div class="analytics-stats">
+
+        <div class="stat-box">
+          <i class="ri-code-line"></i>
+          <h3>120+</h3>
+          <p>Total Projects</p>
+        </div>
+
+        <div class="stat-box">
+          <i class="ri-user-3-line"></i>
+          <h3>80+</h3>
+          <p>Active Clients</p>
+        </div>
+
+        <div class="stat-box">
+          <i class="ri-cloud-line"></i>
+          <h3>45+</h3>
+          <p>Cloud Deployments</p>
+        </div>
+
+      </div>
+
+      <!-- BAR CHART -->
+      <div class="chart-box">
+        <canvas id="analyticsChart"></canvas>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="analytics-right">
+
+      <div class="insight-box">
+        <i class="ri-bar-chart-box-line"></i>
+        <h4>Performance Growth</h4>
+        <p>Projects increased by 35% this quarter</p>
+      </div>
+
+      <div class="insight-box">
+        <i class="ri-shield-check-line"></i>
+        <h4>Security Status</h4>
+        <p>All systems secured with 99.9% uptime</p>
+      </div>
+
+      <div class="insight-box">
+        <i class="ri-lightbulb-flash-line"></i>
+        <h4>Innovation</h4>
+        <p>New AI tools integrated into workflow</p>
+      </div>
+
+      
+<div class="insight-box">
+  <i class="ri-server-line"></i>
+  <h4>Server Performance</h4>
+  <p>Optimized servers ensuring fast and reliable application response.</p>
+</div>
+
+<div class="insight-box">
+  <i class="ri-database-2-line"></i>
+  <h4>Data Management</h4>
+  <p>Efficient data handling with secure storage and real-time processing.</p>
+</div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+  <script src="./js/admin-dashboard.js"></script>
+<script>
+const ctx = document.getElementById('projectChart').getContext('2d');
+
+let chart;
+
+/* DATA */
+const chartData = {
+  last: {
+    label1: "Completed",
+    label2: "Ongoing",
+    data1: [40, 90, 60, 95, 30, 85, 50],
+    data2: [50, 98, 45, 98, 98, 22, 100]
+  },
+  current: {
+    label1: "Completed",
+    label2: "Ongoing",
+    data1: [30, 70, 50, 80, 60, 90, 65],
+    data2: [40, 85, 60, 90, 75, 60, 95]
+  },
+  pending: {
+    label1: "Pending",
+    label2: "Delayed",
+    data1: [60, 50, 70, 40, 80, 55, 75],
+    data2: [70, 60, 80, 50, 90, 65, 85]
+  }
+};
+
+/* CREATE CHART */
+function createChart(type="last"){
+
+  if(chart){
+    chart.destroy();
+  }
+
+  const data = chartData[type];
+
+  chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+      datasets: [
+        {
+          label: data.label1,
+          data: data.data1,
+          borderColor: "#ff512f",
+          backgroundColor: "rgba(255,81,47,0.1)",
+          tension:0.5,
+          fill:true,
+          pointRadius:4
+        },
+        {
+          label: data.label2,
+          data: data.data2,
+          borderColor: "#555",
+          backgroundColor: "rgba(0,0,0,0.05)",
+          tension:0.5,
+          fill:true,
+          pointRadius:4
+        }
+      ]
+    },
+    options:{
+      responsive:true,
+      animation:{
+        duration:1000,
+        easing:"easeInOutQuart"
+      },
+      plugins:{
+        legend:{
+          display:true
+        }
+      },
+      scales:{
+        y:{
+          beginAtZero:true
+        }
+      }
+    }
+  });
+}
+
+/* INIT */
+createChart();
+
+/* DROPDOWN CHANGE */
+document.getElementById("projectFilter").addEventListener("change", function(){
+  createChart(this.value);
+});
+
+function go404(){
+  window.location.href = "dashboard-404.html";
+}
+
+const ctx2 = document.getElementById('analyticsChart').getContext('2d');
+
+new Chart(ctx2, {
+  type: 'bar',
+  data: {
+    labels: ["Jan","Feb","Mar","Apr","May","Jun"],
+    datasets: [{
+      label: "Projects",
+      data: [20, 35, 50, 40, 60, 75],
+      backgroundColor: [
+        "#ff512f",
+        "#ff7e5f",
+        "#dd2476",
+        "#ff512f",
+        "#ff7e5f",
+        "#dd2476"
+      ],
+      borderRadius:6
+    }]
+  },
+  options:{
+    responsive:true,
+    animation:{
+      duration:1200,
+      easing:"easeOutBounce"
+    },
+    plugins:{
+      legend:{
+        display:false
+      }
+    },
+    scales:{
+      y:{
+        beginAtZero:true
+      }
+    }
+  }
+});
+</script>
+</body>
+</html>

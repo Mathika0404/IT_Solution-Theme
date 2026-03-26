@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Solution Website</title>
+
+  <!-- GOOGLE FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- REMIX ICON -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<!-- MODAL -->
+<div id="loginModal" class="login-modal">
+
+  <div class="login-box">
+
+    <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+    <!-- LOGO -->
+    <div class="bio-logo">
+      <i class="ri-team-line"></i>
+    </div>
+
+    <h2 id="formTitle">Welcome Back</h2>
+
+    <p id="formSubtitle">
+      Login to access your IT dashboard and manage your services
+    </p>
+
+    <form id="authForm" onsubmit="handleAuthSubmit(event)">
+
+      <!-- ROLE -->
+      <div id="loginRoleBox">
+        <label>Login As</label>
+        <select id="loginRole">
+          <option value="admin">Admin</option>
+          <option value="user">Client</option>
+        </select>
+        <p class="role-note">Choose your role to continue</p>
+      </div>
+
+      <!-- NAME -->
+      <input type="text" id="fullName" placeholder="Full Name" style="display:none;">
+
+      <!-- PHONE -->
+      <input type="tel" id="phoneNumber" placeholder="Phone Number">
+
+      <!-- EMAIL -->
+      <input type="email" id="email" placeholder="Email Address" required>
+
+      <!-- PASSWORD -->
+      <div class="password-field">
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <i class="ri-eye-off-line toggle-eye" id="eyeIcon" onclick="togglePassword()"></i>
+      </div>
+
+      <!-- CONFIRM -->
+      <input type="password" id="confirmPassword" placeholder="Confirm Password" style="display:none;">
+
+      <button type="submit" class="login-submit" id="submitBtn">
+        Login to Dashboard
+      </button>
+
+    </form>
+
+    <p class="switch-text">
+      <span id="switchText">Don't have an account?</span>
+      <a href="#" onclick="toggleAuth()">Sign up</a>
+    </p>
+
+  </div>
+
+</div>
+
+
+    <!-- NAVBAR -->
+<header>
+  <nav class="navbar">
+
+    <div class="nav__header">
+      <div class="nav__logo">
+        <a href="index.html">
+          <img src="./images/stackly_logo.webp" class="logo-img" alt="logo">
+        </a>
+      </div>
+
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+
+    <ul class="nav__links" id="nav-links">
+      <li class="dropdown">
+        <a href="index.html">Home</a>
+      </li>
+
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="service.html">Service</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+<li>
+  <a href="javascript:void(0)" class="login-btn" onclick="openLogin()">Login</a>
+</li>
+    </ul>
+
+  </nav>
+</header>
+
+
+<!-- HERO SECTION -->
+<section class="hero">
+
+  <!-- OVERLAY -->
+  <div class="overlay"></div>
+
+  <!-- CONTENT -->
+  <div class="hero-content">
+    <h1>Innovative IT Solutions for Your Business</h1>
+    <p>
+      We provide cutting-edge technology services including web development,
+      cloud solutions, and digital transformation to grow your business.
+    </p>
+
+    <button onclick="goTo404()">Get Started</button>
+  </div>
+
+</section>
+
+
+<div class="stats-wrapper">
+  <div class="stats-badge">
+
+    <div class="stat">
+      <i class="ri-team-line"></i>
+      <h3>200+</h3>
+      <p>Successful Projects</p>
+    </div>
+
+    <div class="stat">
+      <i class="ri-settings-3-line"></i>
+      <h3>100%</h3>
+      <p>Customer Satisfaction</p>
+    </div>
+
+    <div class="stat">
+      <i class="ri-briefcase-line"></i>
+      <h3>1K+</h3>
+      <p>Completed Tasks</p>
+    </div>
+
+  </div>
+</div>
+
+
+<section class="company-overview">
+
+  <div class="overview-container">
+
+    <!-- LEFT IMAGE DESIGN -->
+    <div class="overview-image">
+      <img src="./images/home1.webp" class="main-img">
+      <img src="./images/home2.webp" class="small-img">
+
+      <div class="client-box">
+        <h3>500+</h3>
+        <p>Projects Delivered</p>
+      </div>
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="overview-content">
+      <h5>OUR COMPANY OVERVIEW</h5>
+
+      <h2>
+        We Deliver Smart IT Solutions <br>
+        From Idea to Execution
+      </h2>
+
+      <p>
+        We specialize in building scalable IT solutions that help businesses
+        grow digitally. From web and mobile applications to cloud and enterprise
+        systems, we ensure innovation at every step.
+      </p>
+
+      <!-- FEATURES -->
+      <div class="features">
+
+<div class="feature-box">
+  <i class="ri-rocket-line"></i>
+  <div>
+    <h4>Advanced Tech Services</h4>
+    <p>We use modern technologies to build fast, secure, and scalable systems.</p>
+  </div>
+</div>
+
+<div class="feature-box">
+  <i class="ri-global-line"></i>
+  <div>
+    <h4>Secure Networking</h4>
+    <p>Reliable infrastructure and secure networking solutions for businesses.</p>
+  </div>
+</div>
+
+<div class="feature-box">
+  <i class="ri-shield-check-line"></i>
+  <div>
+    <h4>High Quality IT Solutions</h4>
+    <p>We deliver scalable and secure IT solutions for startups and enterprises.</p>
+  </div>
+</div>
+
+      </div>
+
+      <button onclick="goTo404()">Discover More</button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="process-section">
+
+  <h4 class="subtitle">Our Process</h4>
+
+  <div class="process-container">
+
+    <div class="process-step">
+      <h2>01</h2>
+      <h3>Requirement Analysis</h3>
+      <p>
+        We understand your business needs and gather detailed requirements
+        to build the right IT solution.
+      </p>
+    </div>
+
+    <div class="process-step">
+      <h2>02</h2>
+      <h3>Design & Development</h3>
+      <p>
+        Our team designs user-friendly interfaces and develops scalable,
+        secure, and high-performance systems.
+      </p>
+    </div>
+
+    <div class="process-step">
+      <h2>03</h2>
+      <h3>Testing & Deployment</h3>
+      <p>
+        We ensure quality through testing and deliver the final product
+        with smooth deployment and support.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="faq-section">
+
+  <div class="faq-container">
+
+    <!-- LEFT -->
+    <div class="faq-left">
+      <h5>Frequently asked questions</h5>
+      <h2>Frequently asked <span>questions</span></h2>
+      <p>
+        Get answers to common queries about our IT solutions, services,
+        and how we help businesses grow digitally.
+      </p>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="faq-right">
+
+      <!-- ITEM -->
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>What IT services do you provide?</span>
+          <i class="ri-add-line"></i>
+        </div>
+        <div class="faq-answer">
+          <p>We offer web development, mobile apps, cloud solutions, cybersecurity, and IT consulting services.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>How long does a project take?</span>
+          <i class="ri-add-line"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Project timelines depend on complexity, but most solutions are delivered within 2–8 weeks.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Do you provide ongoing support?</span>
+          <i class="ri-add-line"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, we provide 24/7 support, maintenance, and updates to ensure smooth performance.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Are your solutions scalable?</span>
+          <i class="ri-add-line"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Absolutely, our solutions are designed to scale as your business grows.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Can you customize solutions for my business?</span>
+          <i class="ri-add-line"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, we build fully customized IT solutions tailored to your business requirements.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER SECTION -->
+<footer class="bio-footer">
+
+  <div class="footer-container">
+
+    <!-- ABOUT IT COMPANY -->
+    <div class="footer-col">
+      <div class="footer-logo">
+        <img src="./images/stackly_logo.webp" alt="IT Company Logo">
+      </div>
+
+      <p>
+        We provide innovative IT solutions including web development,
+        mobile applications, cloud computing, and cybersecurity services.
+        Our goal is to help businesses transform digitally with scalable,
+        secure, and high-performance technology solutions.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- SOCIAL MEDIA -->
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <ul class="social-links">
+        <li><a href="404.html"><i class="ri-facebook-fill"></i> Facebook</a></li>
+        <li><a href="404.html"><i class="ri-twitter-x-line"></i> Twitter</a></li>
+        <li><a href="404.html"><i class="ri-instagram-line"></i> Instagram</a></li>
+        <li><a href="404.html"><i class="ri-linkedin-fill"></i> LinkedIn</a></li>
+        <li><a href="404.html"><i class="ri-youtube-fill"></i> YouTube</a></li>
+      </ul>
+    </div>
+
+    <!-- IT SERVICES -->
+    <div class="footer-col">
+      <h4>IT Services</h4>
+      <ul>
+        <li><a href="404.html">Web Development</a></li>
+        <li><a href="404.html">Mobile App Development</a></li>
+        <li><a href="404.html">Cloud Solutions</a></li>
+        <li><a href="404.html">Cyber Security</a></li>
+        <li><a href="404.html">UI/UX Design</a></li>
+      </ul>
+    </div>
+
+    <!-- SUPPORT -->
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="404.html">Technical Support</a></li>
+        <li><a href="404.html">Help Center</a></li>
+        <li><a href="404.html">Privacy Policy</a></li>
+        <li><a href="404.html">Terms & Conditions</a></li>
+        <li><a href="404.html">Service Status</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div class="footer-bottom">
+    <p>© 2026 Stackly IT Solutions | All Rights Reserved</p>
+  </div>
+
+</footer>
+<script src="./js/script.js"></script>
+<script>
+  function goTo404(){
+  window.location.href = "404.html";
+}
+
+const faqs = document.querySelectorAll(".faq-item");
+
+faqs.forEach(faq => {
+  faq.addEventListener("click", () => {
+    faq.classList.toggle("active");
+  });
+});
+</script>
+</body>
+</html>

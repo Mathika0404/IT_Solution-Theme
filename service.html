@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Solution Website</title>
+
+  <!-- GOOGLE FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- REMIX ICON -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/service.css">
+</head>
+<body>
+
+<!-- MODAL -->
+<div id="loginModal" class="login-modal">
+
+  <div class="login-box">
+
+    <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+    <!-- LOGO -->
+    <div class="bio-logo">
+      <i class="ri-team-line"></i>
+    </div>
+
+    <h2 id="formTitle">Welcome Back</h2>
+
+    <p id="formSubtitle">
+      Login to access your IT dashboard and manage your services
+    </p>
+
+    <form id="authForm" onsubmit="handleAuthSubmit(event)">
+
+      <!-- ROLE -->
+      <div id="loginRoleBox">
+        <label>Login As</label>
+        <select id="loginRole">
+          <option value="admin">Admin</option>
+          <option value="user">Client</option>
+        </select>
+        <p class="role-note">Choose your role to continue</p>
+      </div>
+
+      <!-- NAME -->
+      <input type="text" id="fullName" placeholder="Full Name" style="display:none;">
+
+      <!-- PHONE -->
+      <input type="tel" id="phoneNumber" placeholder="Phone Number">
+
+      <!-- EMAIL -->
+      <input type="email" id="email" placeholder="Email Address" required>
+
+      <!-- PASSWORD -->
+      <div class="password-field">
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <i class="ri-eye-off-line toggle-eye" id="eyeIcon" onclick="togglePassword()"></i>
+      </div>
+
+      <!-- CONFIRM -->
+      <input type="password" id="confirmPassword" placeholder="Confirm Password" style="display:none;">
+
+      <button type="submit" class="login-submit" id="submitBtn">
+        Login to Dashboard
+      </button>
+
+    </form>
+
+    <p class="switch-text">
+      <span id="switchText">Don't have an account?</span>
+      <a href="404.html" onclick="toggleAuth()">Sign up</a>
+    </p>
+
+  </div>
+
+</div>
+
+
+    <!-- NAVBAR -->
+<header>
+  <nav class="navbar">
+
+    <div class="nav__header">
+      <div class="nav__logo">
+        <a href="index.html">
+          <img src="./images/stackly_logo.webp" class="logo-img" alt="logo">
+        </a>
+      </div>
+
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+
+    <ul class="nav__links" id="nav-links">
+      <li class="dropdown">
+        <a href="index.html">Home</a>
+      </li>
+
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="service.html">Service</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+<li>
+  <a href="javascript:void(0)" class="login-btn" onclick="openLogin()">Login</a>
+</li>
+    </ul>
+
+  </nav>
+</header>
+
+
+<section class="service-hero">
+
+  <div class="service-overlay"></div>
+
+  <div class="service-content">
+    <h1>Our Services</h1>
+    <p>Home / Services</p>
+  </div>
+
+</section>
+
+<section class="service-section">
+
+  <div class="service-container">
+
+    <!-- LEFT -->
+    <div class="service-left">
+      <h5>OUR SERVICES</h5>
+
+      <h2>
+        Delivering Innovative <br>
+        <span>IT Solutions</span> For Your Business
+      </h2>
+
+      <img src="./images/service3.webp" class="service-main-img">
+    </div>
+
+    <!-- RIGHT -->
+    <div class="service-right">
+
+      <div class="service-top-images">
+        <img src="./images/service1.webp">
+        <img src="./images/service2.webp">
+      </div>
+
+      <p>
+        We offer a wide range of IT services designed to help businesses grow
+        and succeed in the digital world. Our solutions are tailored to meet
+        your specific needs with a focus on performance, security, and scalability.
+      </p>
+
+      <!-- SERVICES LIST -->
+      <div class="service-list">
+        <div>
+          <h3>Web Development</h3>
+          <p>Modern & responsive websites</p>
+        </div>
+        <div>
+          <h3>App Development</h3>
+          <p>Android & iOS applications</p>
+        </div>
+        <div>
+          <h3>Cloud Solutions</h3>
+          <p>Secure & scalable systems</p>
+        </div>
+        <div>
+          <h3>Cyber Security</h3>
+          <p>Advanced data protection</p>
+        </div>
+        <div>
+  <h3>UI/UX Design</h3>
+  <p>Intuitive and user-friendly <br>interface design</p>
+</div>
+
+<div>
+  <h3>IT Consulting</h3>
+  <p>Expert guidance to optimize your<br> technology strategy</p>
+</div>
+      </div>
+
+      <!-- BUTTON -->
+      <div class="service-bottom">
+        <button class="service-btn">
+          <span class="play-icon">▶</span>
+          VIEW SERVICES
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="pricing-section">
+
+        <div class="section-title">
+  <h2>Pricing Plan</h2>
+  <div class="title-line"></div>
+</div>
+
+  <div class="pricing-container">
+
+    <!-- CARD 1 -->
+    <div class="price-card">
+      <div class="price-tag">BASIC</div>
+      <h4>Economic</h4>
+      <h2>$9.99 <span>/month</span></h2>
+      <p>Perfect for small businesses starting online presence.</p>
+      <button onclick="window.location.href='404.html'">Select</button>
+    </div>
+
+    <!-- CARD 2 (ACTIVE) -->
+    <div class="price-card active">
+      <div class="price-tag">PREMIUM</div>
+      <h4>The Best</h4>
+      <h2>$19.99 <span>/month</span></h2>
+      <p>Best for growing businesses with advanced features.</p>
+      <button onclick="window.location.href='404.html'">Select</button>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="price-card">
+      <div class="price-tag">PRO</div>
+      <h4>Business</h4>
+      <h2>$29.99 <span>/month</span></h2>
+      <p>Ideal for companies needing scalable solutions.</p>
+      <button onclick="window.location.href='404.html'">Select</button>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="price-card">
+      <div class="price-tag">ULTRA</div>
+      <h4>Enterprise</h4>
+      <h2>$39.99 <span>/month</span></h2>
+      <p>Advanced solutions for large-scale enterprises.</p>
+      <button onclick="window.location.href='404.html'">Select</button>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER SECTION -->
+<footer class="bio-footer">
+
+  <div class="footer-container">
+
+    <!-- ABOUT IT COMPANY -->
+    <div class="footer-col">
+      <div class="footer-logo">
+        <img src="./images/stackly_logo.webp" alt="IT Company Logo">
+      </div>
+
+      <p>
+        We provide innovative IT solutions including web development,
+        mobile applications, cloud computing, and cybersecurity services.
+        Our goal is to help businesses transform digitally with scalable,
+        secure, and high-performance technology solutions.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- SOCIAL MEDIA -->
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <ul class="social-links">
+        <li><a href="404.html"><i class="ri-facebook-fill"></i> Facebook</a></li>
+        <li><a href="404.html"><i class="ri-twitter-x-line"></i> Twitter</a></li>
+        <li><a href="404.html"><i class="ri-instagram-line"></i> Instagram</a></li>
+        <li><a href="404.html"><i class="ri-linkedin-fill"></i> LinkedIn</a></li>
+        <li><a href="404.html"><i class="ri-youtube-fill"></i> YouTube</a></li>
+      </ul>
+    </div>
+
+    <!-- IT SERVICES -->
+    <div class="footer-col">
+      <h4>IT Services</h4>
+      <ul>
+        <li><a href="404.html">Web Development</a></li>
+        <li><a href="404.html">Mobile App Development</a></li>
+        <li><a href="404.html">Cloud Solutions</a></li>
+        <li><a href="404.html">Cyber Security</a></li>
+        <li><a href="404.html">UI/UX Design</a></li>
+      </ul>
+    </div>
+
+    <!-- SUPPORT -->
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="404.html">Technical Support</a></li>
+        <li><a href="404.html">Help Center</a></li>
+        <li><a href="404.html">Privacy Policy</a></li>
+        <li><a href="404.html">Terms & Conditions</a></li>
+        <li><a href="404.html">Service Status</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div class="footer-bottom">
+    <p>© 2026 Stackly IT Solutions | All Rights Reserved</p>
+  </div>
+
+</footer>
+<script src="./js/script.js"></script>
+<script>
+  function goTo404(){
+  window.location.href = "404.html";
+}
+</script>
+</body>
+</html>
